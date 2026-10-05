@@ -45,20 +45,23 @@ flowchart LR
     V5 --> V6["6. GitHub Pages"]
     classDef done fill:#2da44e,color:#fff
     classDef current fill:#bf8700,color:#fff
-    class V1,V2,V3 done
-    class V4 current
+    class V1,V2,V3,V4,V5 done
+    class V6 current
 ```
 
 Vihreä = tehty, keltainen = käynnissä.
 
 ## Edistyminen
 
-**Tila:** Vaihe 4 käynnissä (5.10.2026). Repo luotiin uudelleen, ja ensimmäinen pull request avattiin uudelleen. Käyttäjä tarkistaa sen ja tekee mergen.
+**Tila:** Vaihe 6 käynnissä (5.10.2026). Sovellus on julkaistu GitHub Pagesissa osoitteessa https://jussidoesntcode.github.io/Tehtavalista/ ja toimii. Jäljellä on vaiheen 6 kertaus sekä loppuyhteenveto ja muistilista.
 
 ### Tehty
 - **Vaihe 1:** Käyttäjä loi julkisen repon "Tehtavalista" ja README.md:n.
 - **Vaihe 2:** Claude Code toimii näin: oma väliaikainen ympäristö → commit → push → oma haara GitHubissa. `main` ei muutu ilman käyttäjää.
 - **Vaihe 3:** Sovellus rakennettiin viitenä pienenä committina (HTML → CSS → lisääminen → tehdyksi/poisto → localStorage). Ulkoasu on musta ja teksti vihreä (käyttäjän toive). Revert-harjoitus: tallennus-commit peruttiin ja palautettiin.
+- **Vaihe 4:** PR #1 tarkistettiin "Files changed" -välilehdellä ja mergettiin. Tarkistuksessa löytyi käyttäjän sähköpostiosoite vanhasta commitista, joten repo luotiin uudelleen (ks. Huomioita). Merge-commit, Delete branch ja Revert-painike käytiin läpi.
+- **Vaihe 5:** Käyttäjä loi issuen #2 (välilyönnit jäävät kenttään) mallilla nyt / pitäisi / valmis kun. Tehtävänanto "Korjaa issue #2" → PR #3, jossa "Fixes #2" → merge → issue sulkeutui automaattisesti.
+- **Vaihe 6:** Käyttäjä otti Pagesin käyttöön (Settings → Pages → Deploy from a branch → main, / (root)). Pages-valikkoa ei löytynyt vasemmasta valikosta, mutta suora linkki .../settings/pages toimi. Sovellus toimii julkaistussa osoitteessa.
 
 ### Opittua
 - Commit on tallennuspiste. Pienet commitit = luettava historia, helppo tarkistaa ja helppo perua.
@@ -68,10 +71,17 @@ Vihreä = tehty, keltainen = käynnissä.
 - Testaa ennen commitia (commit 4:ssä testi paljasti rikkinäisen ulkoasun ennen pushia).
 - Commitin pitää olla kokonainen ja toimiva pala, ei välivaihetta, jossa sivu on rikki.
 - Julkisessa repossa myös commitien tekijätiedot (nimi ja sähköposti) ovat julkisia. Tarkista GitHubin sähköpostiasetus aina ennen uutta projektia.
+- Haara ja PR antavat pysähtymiskohdan ennen mergeä. Ennen mergeä korjataan (uusi commit samaan haaraan) tai hylätään (Close pull request). Mergen jälkeen perutaan (Revert).
+- Kun PR on mergetty, haara poistetaan. Uusi työ = uusi haara ajantasaisesta mainista = uusi PR.
+- Issue = mitä tehdään, haara + commitit + PR = miten. "Fixes #N" PR:n kuvauksessa sulkee issuen automaattisesti mergen yhteydessä. Issuet ja PR:t jakavat saman numerosarjan.
+- Hyvin kirjoitettu issue riittää tehtävänannoksi: "Korjaa issue #N".
+- GitHub Pages julkaisee main-haaran. Siksi keskeneräinen työ pidetään haaroissa.
+- localStorage on selainkohtainen: tehtävät näkyvät vain omassa selaimessa.
+- CLAUDE.md on hyvä pohjatieto myös Claude Chatille, kunhan se on ajan tasalla ja mergetty mainiin.
 
-### Ideoita issueiksi (vaihe 5)
-- Pelkkiä välilyöntejä kirjoitettaessa ne jäävät tekstikenttään.
-- Rastittamaton valintaruutu on valkoinen eikä sovi mustavihreään teemaan.
+### Ideoita issueiksi
+- Rastittamaton valintaruutu on valkoinen eikä sovi mustavihreään teemaan. (Ei vielä issueta, käyttäjä halusi siirtyä vaiheeseen 6.)
+- ~~Välilyönnit jäävät tekstikenttään~~ → korjattu (issue #2, PR #3).
 
 ### Huomioita
 - Claude teki README-muutoksen ennen kuin koko ohje oli saatu (ensimmäinen viesti katkesi). Muutos jätettiin voimaan (revert-harjoitus tehtiin toiselle commitille).
@@ -79,7 +89,8 @@ Vihreä = tehty, keltainen = käynnissä.
 - Kahden revert-harjoituksen commit-viestissä mainitaan vanhan repon commit-tunnisteet (85dc79a, 859b22c). Niitä ei ole enää olemassa. Viestien muokkaus olisi vaatinut historian uudelleenkirjoitusta, jota ei tehty.
 
 ### Seuraava vaihe
-- Vaihe 4: PR:n tarkistus "Files changed" -välilehdellä ja merge. Sen jälkeen vaihe 5 (Issues).
+- Vaiheen 6 lyhyt kertaus ja ymmärryksen varmistus.
+- Loppuyhteenveto opituista asioista ja muistilista seuraavaa omaa projektia varten.
 
 ### Lopputulos (tavoite)
 - Toimiva tehtävälista ja selkeä commit-historia.
