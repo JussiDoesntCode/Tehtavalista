@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  background: #000;
+  color: #33ff66;
+  font-family: "Courier New", monospace;
+}
+
+main {
+  max-width: 480px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+input,
+button {
+  font: inherit;
+  color: #33ff66;
+  background: #000;
+  border: 1px solid #33ff66;
+  padding: 8px;
+}
+
+input {
+  flex: 1;
+}
+
+input::placeholder {
+  color: #1a8033;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:hover {
+  background: #33ff66;
+  color: #000;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0;
+  border-bottom: 1px dashed #1a8033;
+}
+
+li.tehty span {
+  text-decoration: line-through;
+  color: #1a8033;
+}
