@@ -2,29 +2,9 @@ const lomake = document.getElementById("lisayslomake");
 const kentta = document.getElementById("uusi-tehtava");
 const lista = document.getElementById("tehtavat");
 
-const TALLENNUSAVAIN = "tehtavalista";
-
-let tehtavat = lataaTehtavat();
-
-function lataaTehtavat() {
-  try {
-    const tallennetut = localStorage.getItem(TALLENNUSAVAIN);
-    return tallennetut ? JSON.parse(tallennetut) : [];
-  } catch (virhe) {
-    return [];
-  }
-}
-
-function tallennaTehtavat() {
-  try {
-    localStorage.setItem(TALLENNUSAVAIN, JSON.stringify(tehtavat));
-  } catch (virhe) {
-    // Tallennus ei onnistu esimerkiksi yksityisessä selausikkunassa.
-  }
-}
+let tehtavat = [];
 
 function piirraLista() {
-  tallennaTehtavat();
   lista.innerHTML = "";
   tehtavat.forEach(function (tehtava, indeksi) {
     const rivi = document.createElement("li");
@@ -67,5 +47,3 @@ lomake.addEventListener("submit", function (tapahtuma) {
   kentta.value = "";
   piirraLista();
 });
-
-piirraLista();
