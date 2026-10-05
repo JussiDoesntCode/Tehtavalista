@@ -30,8 +30,15 @@ button {
   padding: 8px;
 }
 
-input {
+#uusi-tehtava {
   flex: 1;
+}
+
+input[type="checkbox"] {
+  accent-color: #33ff66;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
 }
 
 input::placeholder {
@@ -58,6 +65,10 @@ li {
   gap: 8px;
   padding: 8px 0;
   border-bottom: 1px dashed #1a8033;
+}
+
+li span {
+  flex: 1;
 }
 
 li.tehty span {
