@@ -45,22 +45,38 @@ flowchart LR
     V5 --> V6["6. GitHub Pages"]
     classDef done fill:#2da44e,color:#fff
     classDef current fill:#bf8700,color:#fff
-    class V1 done
-    class V2 current
+    class V1,V2,V3 done
+    class V4 current
 ```
 
 Vihreä = tehty, keltainen = käynnissä.
 
 ## Edistyminen
 
-**Tila:** Vaihe 2 käynnissä (5.10.2026)
+**Tila:** Vaihe 4 käynnissä (5.10.2026). Ensimmäinen pull request avattu, käyttäjä tarkistaa ja tekee mergen.
 
 ### Tehty
-- Vaihe 1: Käyttäjä loi julkisen repon "Tehtavalista" ja README.md:n.
-- Vaihe 2: Käytiin läpi, miten Claude Code toimii: oma väliaikainen ympäristö → commit → push → oma haara GitHubissa.
+- **Vaihe 1:** Käyttäjä loi julkisen repon "Tehtavalista" ja README.md:n.
+- **Vaihe 2:** Claude Code toimii näin: oma väliaikainen ympäristö → commit → push → oma haara GitHubissa. `main` ei muutu ilman käyttäjää.
+- **Vaihe 3:** Sovellus rakennettiin viitenä pienenä committina (HTML → CSS → lisääminen → tehdyksi/poisto → localStorage). Ulkoasu on musta ja teksti vihreä (käyttäjän toive). Revert-harjoitus: tallennus-commit peruttiin ja palautettiin.
+
+### Opittua
+- Commit on tallennuspiste. Pienet commitit = luettava historia, helppo tarkistaa ja helppo perua.
+- Diff: vihreä = lisätty, punainen = poistettu. Katso tiedostojen nimet ja muutoksen koko. Koodin yksityiskohdat voi ohittaa.
+- Revert on uusi commit, joka kumoaa aiemman. Mitään ei katoa historiasta.
+- Konflikti: jos myöhempi commit muuttaa samaa kohtaa, aiemman commitin peruminen on hankalaa.
+- Testaa ennen commitia (commit 4:ssä testi paljasti rikkinäisen ulkoasun ennen pushia).
+- Commitin pitää olla kokonainen ja toimiva pala, ei välivaihetta, jossa sivu on rikki.
+
+### Ideoita issueiksi (vaihe 5)
+- Pelkkiä välilyöntejä kirjoitettaessa ne jäävät tekstikenttään.
+- Rastittamaton valintaruutu on valkoinen eikä sovi mustavihreään teemaan.
 
 ### Huomioita
-- Claude teki README-muutoksen ("Lisää README:hen sovelluksen kuvaus") ennen kuin koko ohje oli saatu. Ensimmäinen viesti oli katkennut, joten muutos tehtiin ilman hyväksyntää. Muutos voidaan pitää tai sen perumista voidaan harjoitella vaiheessa 3.
+- Claude teki README-muutoksen ennen kuin koko ohje oli saatu (ensimmäinen viesti katkesi). Muutos jätettiin voimaan (revert-harjoitus tehtiin toiselle commitille).
+
+### Seuraava vaihe
+- Vaihe 4: PR:n tarkistus "Files changed" -välilehdellä ja merge. Sen jälkeen vaihe 5 (Issues).
 
 ### Lopputulos (tavoite)
 - Toimiva tehtävälista ja selkeä commit-historia.
