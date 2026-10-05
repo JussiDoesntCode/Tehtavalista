@@ -53,7 +53,7 @@ Vihreä = tehty, keltainen = käynnissä.
 
 ## Edistyminen
 
-**Tila:** Vaihe 4 käynnissä (5.10.2026). Ensimmäinen pull request avattu, käyttäjä tarkistaa ja tekee mergen.
+**Tila:** Vaihe 4 käynnissä (5.10.2026). Repo luotiin uudelleen, ja ensimmäinen pull request avattiin uudelleen. Käyttäjä tarkistaa sen ja tekee mergen.
 
 ### Tehty
 - **Vaihe 1:** Käyttäjä loi julkisen repon "Tehtavalista" ja README.md:n.
@@ -67,6 +67,7 @@ Vihreä = tehty, keltainen = käynnissä.
 - Konflikti: jos myöhempi commit muuttaa samaa kohtaa, aiemman commitin peruminen on hankalaa.
 - Testaa ennen commitia (commit 4:ssä testi paljasti rikkinäisen ulkoasun ennen pushia).
 - Commitin pitää olla kokonainen ja toimiva pala, ei välivaihetta, jossa sivu on rikki.
+- Julkisessa repossa myös commitien tekijätiedot (nimi ja sähköposti) ovat julkisia. Tarkista GitHubin sähköpostiasetus aina ennen uutta projektia.
 
 ### Ideoita issueiksi (vaihe 5)
 - Pelkkiä välilyöntejä kirjoitettaessa ne jäävät tekstikenttään.
@@ -74,6 +75,8 @@ Vihreä = tehty, keltainen = käynnissä.
 
 ### Huomioita
 - Claude teki README-muutoksen ennen kuin koko ohje oli saatu (ensimmäinen viesti katkesi). Muutos jätettiin voimaan (revert-harjoitus tehtiin toiselle commitille).
+- **Repo luotiin uudelleen (5.10.2026):** Vanhan repon ensimmäisessä commitissa näkyi käyttäjän oikea sähköpostiosoite. Käyttäjä otti GitHubissa käyttöön asetuksen "Keep my email addresses private", poisti vanhan repon ja loi uuden samalla nimellä. Clauden commitit siirrettiin uuden repon päälle, ja ensimmäinen PR avattiin uudelleen.
+- Kahden revert-harjoituksen commit-viestissä mainitaan vanhan repon commit-tunnisteet (85dc79a, 859b22c). Niitä ei ole enää olemassa. Viestien muokkaus olisi vaatinut historian uudelleenkirjoitusta, jota ei tehty.
 
 ### Seuraava vaihe
 - Vaihe 4: PR:n tarkistus "Files changed" -välilehdellä ja merge. Sen jälkeen vaihe 5 (Issues).
