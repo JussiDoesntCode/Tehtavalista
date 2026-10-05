@@ -89,7 +89,9 @@ Vihreä = tehty, keltainen = käynnissä.
 - Kahden revert-harjoituksen commit-viestissä mainitaan vanhan repon commit-tunnisteet (85dc79a, 859b22c). Niitä ei ole enää olemassa. Viestien muokkaus olisi vaatinut historian uudelleenkirjoitusta, jota ei tehty.
 
 ### Seuraava vaihe
-- Vaiheen 6 lyhyt kertaus ja ymmärryksen varmistus.
+- Session 1 päättyi 5.10.2026. Aloita seuraava sessio lyhyellä kertauksella.
+- Tarkista, että PR #4 (tämä CLAUDE.md-päivitys) on mergetty. Jos ei ole, neuvo käyttäjää tekemään merge.
+- Vaiheen 6 kertauskysymys (vastaamatta): "Jos valkoinen valintaruutu korjattaisiin nyt, missä vaiheessa korjaus näkyisi julkaistulla sivulla, ja miksi ei aiemmin?" (Vastaus: vasta mergen jälkeen, koska Pages julkaisee main-haaran.)
 - Loppuyhteenveto opituista asioista ja muistilista seuraavaa omaa projektia varten.
 
 ### Lopputulos (tavoite)
