@@ -61,6 +61,7 @@ lomake.addEventListener("submit", function (tapahtuma) {
   tapahtuma.preventDefault();
   const teksti = kentta.value.trim();
   if (teksti === "") {
+    kentta.value = "";
     return;
   }
   tehtavat.push({ teksti: teksti, tehty: false });
